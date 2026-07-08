@@ -1,0 +1,7 @@
+__pycache__/
+   *.pyc
+   .streamlit/secrets.toml
+   .DS_Store
+   outputs/predictions.csv
+   outputs/reports/*.pdf
+   outputs/processed_images/*.png
