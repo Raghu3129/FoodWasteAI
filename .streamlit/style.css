@@ -1,0 +1,178 @@
+/* ==========================================================================
+   FoodWasteAI — Premium SaaS Theme (Apple / Stripe / Notion inspired)
+   Palette: Green (#1DB954) · White (#FFFFFF) · Dark Gray (#1E1E1E)
+   ========================================================================== */
+
+:root {
+  --fw-green: #1DB954;
+  --fw-green-dark: #169943;
+  --fw-green-light: #E9F9EF;
+  --fw-white: #FFFFFF;
+  --fw-gray-900: #1E1E1E;
+  --fw-gray-700: #3A3A3A;
+  --fw-gray-500: #6B6B6B;
+  --fw-gray-200: #E9E9EC;
+  --fw-gray-100: #F5F6F8;
+  --fw-radius: 16px;
+  --fw-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  --fw-shadow-hover: 0 8px 28px rgba(0,0,0,0.10);
+}
+
+html, body, [class*="css"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+/* App background */
+.stApp {
+  background: linear-gradient(180deg, #FAFBFC 0%, #F5F6F8 100%);
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+  background: var(--fw-gray-900);
+  border-right: 1px solid #000;
+}
+section[data-testid="stSidebar"] * {
+  color: #EDEDED !important;
+}
+section[data-testid="stSidebar"] .stRadio label {
+  padding: 6px 4px;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+section[data-testid="stSidebar"] .stRadio label:hover {
+  background: rgba(29, 185, 84, 0.15);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--fw-gray-900);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Card container */
+.fw-card {
+  background: var(--fw-white);
+  border-radius: var(--fw-radius);
+  padding: 22px 26px;
+  box-shadow: var(--fw-shadow);
+  border: 1px solid var(--fw-gray-200);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  margin-bottom: 18px;
+}
+.fw-card:hover {
+  box-shadow: var(--fw-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Metric card */
+.fw-metric {
+  background: var(--fw-white);
+  border-radius: var(--fw-radius);
+  padding: 18px 20px;
+  border: 1px solid var(--fw-gray-200);
+  box-shadow: var(--fw-shadow);
+  text-align: left;
+}
+.fw-metric-label {
+  font-size: 13px;
+  color: var(--fw-gray-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.fw-metric-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--fw-gray-900);
+}
+.fw-metric-sub {
+  font-size: 12px;
+  color: var(--fw-green-dark);
+  margin-top: 4px;
+}
+
+/* Badge / pill */
+.fw-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.fw-badge-green { background: var(--fw-green-light); color: var(--fw-green-dark); }
+.fw-badge-amber { background: #FEF6E7; color: #B9770E; }
+.fw-badge-red   { background: #FDEDEE; color: #C0392B; }
+
+/* Buttons */
+.stButton > button {
+  background: var(--fw-green);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.55em 1.4em;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 8px rgba(29,185,84,0.25);
+}
+.stButton > button:hover {
+  background: var(--fw-green-dark);
+  box-shadow: 0 4px 14px rgba(29,185,84,0.35);
+  transform: translateY(-1px);
+}
+
+/* Banner */
+.fw-banner {
+  background: linear-gradient(135deg, var(--fw-gray-900) 0%, #2C2C2C 100%);
+  border-radius: 20px;
+  padding: 34px 38px;
+  color: white;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+.fw-banner::after {
+  content: "";
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(29,185,84,0.35) 0%, rgba(29,185,84,0) 70%);
+}
+.fw-banner h1 { color: white; margin-bottom: 6px; }
+.fw-banner p { color: #C9CCD1; font-size: 15px; }
+
+/* Divider */
+.fw-divider {
+  height: 1px;
+  background: var(--fw-gray-200);
+  margin: 18px 0;
+  border: none;
+}
+
+/* Progress ring text center trick already handled by plotly gauge */
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--fw-gray-200);
+}
+
+/* File uploader */
+[data-testid="stFileUploaderDropzone"] {
+  border: 2px dashed var(--fw-green);
+  border-radius: var(--fw-radius);
+  background: var(--fw-green-light);
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab"] {
+  font-weight: 600;
+  color: var(--fw-gray-700);
+}
+.stTabs [aria-selected="true"] {
+  color: var(--fw-green-dark) !important;
+}

@@ -1,0 +1,10 @@
+streamlit>=1.38.0
+opencv-python-headless>=4.10.0
+scikit-learn>=1.5.1
+numpy>=1.26.4
+pandas>=2.2.2
+plotly>=5.23.0
+matplotlib>=3.9.1
+Pillow>=10.4.0
+joblib>=1.4.2
+reportlab>=4.2.2
